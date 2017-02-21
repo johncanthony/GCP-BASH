@@ -6,18 +6,19 @@ gce_quick_instance
 Script for quickly standing up / tearing down a GCE instance in the us-central1-c zone.
 </br>
 <h4>Usage:</h4>
-Usage : quick-instance
 
 quick-instance [options]
 
 --------------------------
 
  Options:
-
+</br>
  create 
    Creates a quick instance in the us-central1-c zone.
+</br>
  list 
    Lists all quick created instances
+</br>
  delete [instance_name]
    Deletes the quick instance. (Name required)
 
