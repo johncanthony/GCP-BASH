@@ -37,12 +37,12 @@ usage
 usage(){
 
 echo "Usage : quick-instance"
-echo "quick-instance [options]"
+echo "gce-quick-instance [options]"
 echo "--------------------------"
 echo " Options:"
 echo ""
 echo " create "
-echo "   Creates a quick instance in the us-central1-c zone."
+echo "   Creates a quick Debian instance in the us-central1-c zone."
 echo " list "
 echo "   Lists all quick created instances"
 echo " delete [instance_name]"
