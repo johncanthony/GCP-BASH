@@ -13,12 +13,12 @@ quick-instance [options]
 
  Options:
 </br>
- create 
+ <b>create</b></br> 
    Creates a quick instance in the us-central1-c zone.
 </br>
- list 
+ <b>list</b></br> 
    Lists all quick created instances
 </br>
- delete [instance_name]
+ <b>delete [instance_name]</b></br>
    Deletes the quick instance. (Name required)
 
