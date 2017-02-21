@@ -1,0 +1,62 @@
+#!/bin/bash
+
+ZONE="us-central1-c"
+DATE=$(date +%s)
+NAME="quick-instance"$DATE
+CMD="gcloud compute instances"
+
+
+
+create(){
+
+$CMD create --zone $ZONE $NAME
+
+}
+
+list(){
+
+$CMD list | awk '{print $1}' | grep quick
+
+}
+
+delete(){
+
+if [ $# -eq 2 ]
+then
+
+echo "Deleting instance: "$2
+$CMD delete $2 --zone=$ZONE
+
+exit 0
+fi
+
+usage
+
+}
+
+usage(){
+
+echo "Usage : quick-instance"
+echo "quick-instance [options]"
+echo "--------------------------"
+echo " Options:"
+echo ""
+echo " create "
+echo "   Creates a quick instance in the us-central1-c zone."
+echo " list "
+echo "   Lists all quick created instances"
+echo " delete [instance_name]"
+echo "   Deletes the quick instance. (Name required)"
+
+}
+
+case $1 in
+
+create|list|delete)
+  $1 $@
+;;
+*)
+usage
+;;
+esac 
+
