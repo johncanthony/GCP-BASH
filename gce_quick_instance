@@ -4,13 +4,14 @@ ZONE="us-central1-c"
 DATE=$(date +%s)
 NAME="quick-instance"$DATE
 CMD="gcloud compute instances"
-
+SCOPES="https://www.googleapis.com/auth/compute,default"
 
 
 create(){
 
-$CMD create --zone $ZONE $NAME
+echo "$CMD create $NAME --scopes $SCOPES --zone $ZONE"
 
+$CMD create $NAME --scopes $SCOPES --zone $ZONE 
 }
 
 list(){
